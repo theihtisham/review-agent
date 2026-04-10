@@ -22,6 +22,9 @@
   ],
   "author": "ReviewAgent Contributors",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@actions/core": "^1.10.1",
     "@actions/github": "^6.0.0",

@@ -2,6 +2,7 @@
 
 **Your senior dev in a GitHub Action — AI reviews every PR with line-by-line comments, catches bugs and security holes before merge.**
 
+[![npm version](https://img.shields.io/npm/v/@theihtisham/review-agent?style=for-the-badge&logo=npm&color=CB3847)](https://www.npmjs.com/package/@theihtisham/review-agent)
 [![GitHub Action](https://img.shields.io/badge/GitHub-Action-blue?logo=github)](https://github.com/features/actions)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178C6?logo=typescript)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -89,6 +90,16 @@ Critical security issues found: SQL injection, hardcoded secrets, and open redir
 ```
 
 ---
+
+## Install
+
+```bash
+# npm
+npm install @theihtisham/review-agent
+
+# Or use instantly without installing
+npx @theihtisham/review-agent
+```
 
 ## Installation
 
