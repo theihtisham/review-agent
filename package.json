@@ -1,0 +1,46 @@
+{
+  "name": "@theihtisham/review-agent",
+  "version": "1.0.0",
+  "description": "AI-powered code review GitHub Action with line-by-line PR comments",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/main.ts -o dist --source-map --license licenses.txt",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "all": "npm run lint && npm run test && npm run build"
+  },
+  "keywords": [
+    "github-action",
+    "code-review",
+    "ai",
+    "pull-request",
+    "linting",
+    "security",
+    "automation"
+  ],
+  "author": "ReviewAgent Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "openai": "^4.67.3",
+    "js-yaml": "^4.1.0",
+    "minimatch": "^9.0.5"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.7.9",
+    "@vercel/ncc": "^0.38.3",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theihtisham/review-agent"
+  }
+}

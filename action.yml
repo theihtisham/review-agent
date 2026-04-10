@@ -1,0 +1,65 @@
+name: "ReviewAgent - AI Code Review"
+description: "AI-powered code review that posts line-by-line review comments on PRs. Catches bugs, security holes, performance issues, and style violations."
+author: "ReviewAgent"
+branding:
+  icon: "eye"
+  color: "purple"
+
+inputs:
+  github-token:
+    description: "GitHub token for API access. Use secrets.GITHUB_TOKEN or a PAT."
+    required: true
+  llm-provider:
+    description: "LLM provider to use: openai, anthropic, or ollama"
+    required: false
+    default: "openai"
+  llm-api-key:
+    description: "API key for the LLM provider. For Ollama, this can be omitted. Store as a GitHub secret."
+    required: false
+    default: ""
+  llm-model:
+    description: "Model name to use (e.g., gpt-4o, claude-sonnet-4-20250514, llama3.1)"
+    required: false
+    default: "gpt-4o"
+  llm-base-url:
+    description: "Custom base URL for the LLM API. Required for Ollama or self-hosted endpoints."
+    required: false
+    default: ""
+  config-path:
+    description: "Path to .reviewagent.yml config file in the repo"
+    required: false
+    default: ".reviewagent.yml"
+  severity:
+    description: "Minimum severity to report: critical, warning, info"
+    required: false
+    default: "warning"
+  max-comments:
+    description: "Maximum number of review comments to post per PR"
+    required: false
+    default: "50"
+  review-type:
+    description: "Type of GitHub review to submit: approve, request-changes, or comment"
+    required: false
+    default: "comment"
+  language-hints:
+    description: "Comma-separated language hints for the reviewer (e.g., 'typescript,python')"
+    required: false
+    default: ""
+  learn-conventions:
+    description: "Whether to learn repo conventions from existing code"
+    required: false
+    default: "true"
+
+outputs:
+  review-id:
+    description: "The ID of the submitted GitHub review"
+  comments-posted:
+    description: "Number of review comments posted"
+  score:
+    description: "Overall code quality score (0-100)"
+  summary:
+    description: "Short summary of the review findings"
+
+runs:
+  using: "node20"
+  main: "dist/index.js"

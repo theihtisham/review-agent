@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.js.map
+*.d.ts
+*.d.ts.map
+!__tests__/**/*.js
+coverage/
+.env
+.env.local
+licenses.txt
+*.tgz
