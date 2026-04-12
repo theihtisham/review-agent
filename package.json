@@ -20,7 +20,7 @@
     "security",
     "automation"
   ],
-  "author": "ReviewAgent Contributors",
+  "author": "ihtisham",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -37,13 +37,17 @@
     "@types/node": "^22.7.9",
     "@vercel/ncc": "^0.38.3",
     "typescript": "^5.6.3",
-    "vitest": "^2.1.5"
-  },
-  "publishConfig": {
-    "access": "public"
+    "vitest": "^2.1.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "@types/jest": "^29.5.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/theihtisham/review-agent"
-  }
+    "url": "git+https://github.com/theihtisham/review-agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theihtisham/review-agent/issues"
+  },
+  "homepage": "https://github.com/theihtisham/review-agent#readme"
 }
